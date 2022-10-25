@@ -68,3 +68,12 @@ const team =[
 for (member of team){
     console.log(member);
 }
+
+// MILESTONE 2
+
+const lista = document.querySelector('.lista');
+
+for(let member of team){
+    const output = `<li>${member.name}, ${member.role}, ${member.image}</li>`;
+    lista.innerHTML += output;
+}
