@@ -58,7 +58,7 @@ const team =[
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        image: 'barbara-ramos-graphic-designer'
+        image: 'barbara-ramos-graphic-designer.jpg'
     }
 ]
 
@@ -71,9 +71,28 @@ for (member of team){
 
 // MILESTONE 2
 
-const lista = document.querySelector('.lista');
+// const lista = document.querySelector('.lista');
 
-for(let member of team){
-    const output = `<li>${member.name}, ${member.role}, ${member.image}</li>`;
-    lista.innerHTML += output;
+// for(let member of team){
+//     const output = `<li>${member.name}, ${member.role}, ${member.image}</li>`;
+//     lista.innerHTML += output;
+// }
+
+// MILESTONE 3
+
+const row = document.getElementById('row');
+
+for(member of team){
+    let card = `
+        <div class="col-4 d-flex justify-content-center py-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-img"><img src="img/${member.image}" class="card-img-top" alt="${member.name}"></div>
+            <div class="card-body d-flex flex-column align-items-center my-3">
+              <h5 class="card-title p-1">${member.name}</h5>
+              <p class="card-text">${member.role}</p>
+            </div>
+          </div>
+        </div>
+        `;
+ row.innerHTML += card;   
 }
