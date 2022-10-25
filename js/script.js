@@ -63,3 +63,8 @@ const team =[
 ]
 
 
+// MILESTONE 1
+
+for (member of team){
+    console.log(member);
+}
